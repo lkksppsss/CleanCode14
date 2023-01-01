@@ -70,7 +70,7 @@ public class Args
         }
         else
         {
-            break;
+            return;
         }
 
         while(currentArgument.MoveNext())
@@ -142,6 +142,11 @@ public class Args
     }
     public string[] GetStringArray(char[] arg)
     {
-        return StringArrayArgumentMarshaler.GetValue(marshalers.GetValueOrDefault(arg));
+        List<string> result = new List<string>();
+        foreach(char argChar in arg)
+        {
+            result.Add(StringArrayArgumentMarshaler.GetValue(marshalers.GetValueOrDefault(argChar)));
+        }
+        return result.ToArray();
     }
 }
