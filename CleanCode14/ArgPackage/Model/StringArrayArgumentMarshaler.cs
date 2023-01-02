@@ -16,7 +16,8 @@ public class StringArrayArgumentMarshaler : IArgumentMarshaler
     {
         try
         {
-            stringValue = currentArgument.MoveNext() ? currentArgument.Current : throw new Exception("IEnumerator move next fail");
+            currentArgument.MoveNext();
+            stringValue = currentArgument.Current;
         }
         catch (InvalidOperationException e)
         {

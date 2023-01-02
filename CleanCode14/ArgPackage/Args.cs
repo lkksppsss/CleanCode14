@@ -60,22 +60,12 @@ public class Args
     }
     private void ParseArgumentStrings(List<string> argsList)
     {
-        currentArgument = argsList.GetEnumerator();
-        var temp = argsList.GetEnumerator();
-
-        string argString = currentArgument.Current;
-        if (argString.StartsWith("-"))
-        {
-            ParseArgumentCharacters(argString.Substring(1));
-        }
-        else
-        {
-            return;
-        }
+        currentArgument = argsList.Select(x => x).GetEnumerator();
+        var temp = argsList.Select(x => x).GetEnumerator();
 
         while(currentArgument.MoveNext())
         {
-            argString = currentArgument.Current;
+            string argString = currentArgument.Current;
             if (argString.StartsWith("-"))
             {
                 ParseArgumentCharacters(argString.Substring(1));

@@ -5,7 +5,9 @@ VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanCode14", "CleanCode14\CleanCode14.csproj", "{365B83B7-4E5C-42EA-B0C2-D5F42368E922}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanCode_Darft", "CleanCode_Darft\CleanCode_Darft.csproj", "{11649973-0242-43FC-97E2-5BD74DAC0E0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanCode_Darft", "CleanCode_Darft\CleanCode_Darft.csproj", "{11649973-0242-43FC-97E2-5BD74DAC0E0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanCode_Draft_1", "CleanCode_Draft_1\CleanCode_Draft_1.csproj", "{3CC806FD-3CCC-4854-8D32-C10F061F08C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{11649973-0242-43FC-97E2-5BD74DAC0E0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11649973-0242-43FC-97E2-5BD74DAC0E0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11649973-0242-43FC-97E2-5BD74DAC0E0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CC806FD-3CCC-4854-8D32-C10F061F08C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CC806FD-3CCC-4854-8D32-C10F061F08C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CC806FD-3CCC-4854-8D32-C10F061F08C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CC806FD-3CCC-4854-8D32-C10F061F08C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

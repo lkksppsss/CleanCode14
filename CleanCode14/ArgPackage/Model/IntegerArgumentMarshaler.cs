@@ -14,9 +14,10 @@ public class IntegerArgumentMarshaler : IArgumentMarshaler
     public void Set(IEnumerator<string> currentArgument)
     {
         string parameter = null;
-        try 
+        try
         {
-            parameter = currentArgument.MoveNext() ? currentArgument.Current : throw new Exception("IEnumerator move next fail");
+            currentArgument.MoveNext();
+            parameter = currentArgument.Current;
             intValue = int.Parse(parameter);
         } 
         catch (InvalidOperationException e) 

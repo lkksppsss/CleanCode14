@@ -17,7 +17,8 @@ public class DoubleArgumentMarshaler : IArgumentMarshaler
         string parameter = string.Empty;
         try 
         {
-            parameter = currentArgument.MoveNext() ? currentArgument.Current : throw new Exception("IEnumerator move next fail");
+            currentArgument.MoveNext();
+            parameter = currentArgument.Current;
             doubleValue = double.Parse(parameter);
         } 
         catch (InvalidOperationException e) 
