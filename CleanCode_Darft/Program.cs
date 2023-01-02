@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Args arg = new Args("l, p#, d*", args);
+        Args arg = new Args("l, p#, d*", new string[] {"-l", "-p", "50", "-d", "ABC" });
         bool logging = arg.GetBoolean('l');
         int port = arg.GetInt('p');
         string directory = arg.GetString('d');

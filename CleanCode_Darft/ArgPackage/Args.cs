@@ -169,7 +169,7 @@ public class Args
         try 
         {
             parameter = args[currentArgument];
-            intArgs.Add(argChar, int.Parse(parameter));
+            intArgs[argChar] =  int.Parse(parameter);
         } 
         catch (InvalidOperationException e) 
         {
@@ -192,7 +192,7 @@ public class Args
         currentArgument++;
         try 
         {
-            stringArgs.Add(argChar, args[currentArgument]);
+            stringArgs[argChar] = args[currentArgument];
         } 
         catch (InvalidOperationException e) 
         {
@@ -208,7 +208,7 @@ public class Args
     }
     private void SetBooleanArg(char argChar, bool value)
     {
-        booleanArgs.Add(argChar, value);
+        booleanArgs[argChar] = value;
     }
     private bool IsBooleanArg(char argChar)
     {
@@ -254,7 +254,7 @@ public class Args
     }
     private bool FalseIfNull(bool? b)
     {
-        return b.HasValue ? false : b.Value;
+        return b.HasValue ? b.Value : false;
     }
     private int ZeroIfNull(int? i)
     {
