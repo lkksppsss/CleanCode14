@@ -28,7 +28,7 @@ public class Args_bool
     {
         if (schema.Length == 0 && args.Length == 0) return true;
         ParseSchema();
-        ParseArgument();
+        ParseArguments();
         return unExpectedArguments.Count() == 0;
     }
     private bool ParseSchema()
@@ -57,6 +57,14 @@ public class Args_bool
         {
             booleanArgs_bool.Add(c, false);
         }
+    }
+    private bool ParseArguments()
+    {
+        foreach (string arg in args)
+        {
+           ParseArgument(arg);
+        }
+        return true;
     }
     private void ParseArgument(string arg)
     {
